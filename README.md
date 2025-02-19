@@ -6,7 +6,7 @@ Creates a fully automated cicd pipeline to deploy a python web app:
 - Provision linux server by Terraform and deploys CICD automation code with Ansible roles
 - Installs Jenkins and Groovy and runs the pipeline code
   
-### Note on Jenkins installation
+#### Note on Jenkins installation ####
 Java (runtime & compiler) is required to be installed for Jenkins to work.
 ```
 java -version
@@ -22,7 +22,7 @@ Group=jenkins
 ExecStart=/usr/bin/java -jar /usr/share/jenkins/jenkins.war --httpPort=8085 --httpListenAddress=0.0.0.0
 Restart=on-failure
 ```
-## pipeline as code
+### pipeline as code
 
 The idea is to manage the entire cicd infrastructure as code:
 ```
