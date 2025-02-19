@@ -1,0 +1,45 @@
+// pipeline to deploy a python web app code to (Dev, test tbu, prod tbu) Env on push
+
+def grv 
+pipeline{
+    agent any 
+
+    stages {
+
+        stage ('ci'){
+            steps{
+                git branch:'main', url:'https://github.com/memor24/py-game.git'
+                script{
+                    grv = load "cicd.groovy"
+                }
+            }
+        }
+
+        stage ('build'){
+            steps{
+                script{
+                    grv.buildApp()
+                }
+                
+            }
+        }
+
+        stage('test'){
+            steps{
+                script{
+                    grv.testApp()
+                }
+            }
+
+        }
+
+        stage('deploy'){
+            steps{
+                script{
+                    grv.deployApp()
+                }
+            }
+        }
+
+    }
+} 
