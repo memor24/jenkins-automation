@@ -1,16 +1,6 @@
 # jenkins-automation
-# Jenkins CICD as code
-The idea is to manage the entire cicd infrastructure as code:
-```
-terraform fmt
-terraform init
+Jenkins CICD pipeline as code deployed with Ansible on a private server:
 
-terraform validate
-terraform plan
-
-terraform apply
-terraform destroy
-```
 ## On-premise
 Creates a fully automated cicd pipeline to deploy a python web app:
 - Provision linux server by Terraform and deploys CICD automation code with Ansible roles
@@ -32,6 +22,20 @@ Group=jenkins
 ExecStart=/usr/bin/java -jar /usr/share/jenkins/jenkins.war --httpPort=8085 --httpListenAddress=0.0.0.0
 Restart=on-failure
 ```
+## pipeline as code
+
+The idea is to manage the entire cicd infrastructure as code:
+```
+terraform fmt
+terraform init
+
+terraform validate
+terraform plan
+
+terraform apply
+terraform destroy
+```
+
 ----------------
 ## Cloud
-The Jenkins server will be cloud based (ec2 or k8s)
+The Jenkins server will be cloud based (ec2 with auto-scaling group)
