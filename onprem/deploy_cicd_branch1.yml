@@ -1,6 +1,3 @@
-# use ansible to install jenkins on the server
-# including java-8, java-17, jenkins, groovy
-# run the Jenkinsfile (& groovy script)
 ---
 - hosts: all #vm_ip
   become: yes

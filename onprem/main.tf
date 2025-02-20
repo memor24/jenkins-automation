@@ -1,4 +1,4 @@
-// vbox linux ubuntu server as jenkins master
+// linux ubuntu server as jenkins master 
 
 terraform {
   required_providers {

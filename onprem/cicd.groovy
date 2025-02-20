@@ -1,6 +1,3 @@
-// write the entire pipeline in groovy including
-// (user, environment, stages, plugins)
-// versioning + tagging
 
 def buildApp(){
     sh 'pip3 install -r requirements.txt'
