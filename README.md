@@ -17,4 +17,4 @@ terraform apply
 ```
 ----------------
 ## Cloud
-The Jenkins server will be cloud based [ec2 with auto-scaling group](https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/)
+The Jenkins server will be cloud based [ec2 with auto-scaling group](https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/) or ECS.
