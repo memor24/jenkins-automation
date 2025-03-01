@@ -13,13 +13,20 @@ variable "vcenter" {
 }
 
 
+
 ## vm
 
-variable "cpu"{
-    default=1
+variable "cpu" {
+  default = 1
 }
 
-variable "ram"{
-    default=1024
+variable "ram" {
+  default = 1024
 }
 
+variable "guest_id" {
+  default = "10000"
+}
+
+variable "password"{} # value in tfvars
+variable "host"{}
