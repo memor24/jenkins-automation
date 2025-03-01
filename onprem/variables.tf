@@ -1,3 +1,0 @@
-variable "host" {
-  default = "all"
-}
